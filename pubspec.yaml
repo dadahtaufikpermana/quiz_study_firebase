@@ -1,0 +1,40 @@
+name: quiz_study_firebase
+description: A new Flutter project.
+publish_to: 'none'
+
+environment:
+  sdk: ">=2.19.2 <3.0.0"
+
+dependencies:
+  firebase_core: ^2.7.1
+  get: ^4.6.5
+  cloud_firestore: ^4.4.4
+  google_fonts: ^4.0.3
+  firebase_storage: ^11.0.15
+  cached_network_image: ^3.2.3
+  logger: 1.3.0
+  flutter_zoom_drawer: 3.0.4+1
+  firebase_auth: 4.2.10
+  url_launcher: 6.1.10
+  google_sign_in: 6.0.2
+  flutter_svg: 2.0.4
+  shimmer: 2.0.0
+  easy_separator: 1.0.1
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_lints: ^2.0.0
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  assets:
+    - assets/images/
+    - assets/icons/
+    - assets/DB/papers/
+  fonts:
+    - family: AppIcons
+      fonts:
+        - asset: assets/icons/AppIcons.ttf
+  uses-material-design: true
