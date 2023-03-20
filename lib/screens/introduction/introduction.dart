@@ -31,7 +31,7 @@ class AppIntroductionScreen extends StatelessWidget {
                 height: 40,
               ),
               AppCircleButton(
-                onTap: () => Get.offAndToNamed("/data_uploader"),
+                onTap: () => Get.offAndToNamed("/home"),
                 child: const Icon(
                   Icons.arrow_forward,
                   size: 35,
