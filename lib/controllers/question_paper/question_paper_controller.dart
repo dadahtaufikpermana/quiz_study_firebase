@@ -14,6 +14,7 @@ class QuestionPaperController extends GetxController {
 
   @override
   void onReady() {
+    Logger().d("cekk");
     getAllPapers();
     super.onReady();
   }
@@ -21,9 +22,12 @@ class QuestionPaperController extends GetxController {
   Future<void> getAllPapers() async {
     try {
       QuerySnapshot<Map<String, dynamic>> data = await questionPaperRF.get();
-      final paperList = data.docs
-          .map((paper) => QuestionPaperModel.fromSnapshot(paper))
-          .toList();
+      Logger().d(data.docs.length);
+      final paperList = data.docs.map((paper) {
+        Logger().d("cek${paper.id}");
+        return QuestionPaperModel.fromSnapshot(paper);
+      }).toList();
+      Logger().d(paperList);
       allPapers.assignAll(paperList);
 
       for (var paper in paperList) {
